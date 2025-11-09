@@ -26,8 +26,7 @@ services:
   telegraf:
     container_name: telegraf
     image: telegraf:latest
-    ports:
-      - "5555:5555"
+    
     entrypoint: ["sh", "/entrypoint-telegraf.sh"]
     volumes:
       - ./telegraf/entrypoint-telegraf.sh:/entrypoint-telegraf.sh:ro
